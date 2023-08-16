@@ -28,8 +28,10 @@ public abstract class Product {
     public void setProductName(String productName) {
         this.productName = productName;
     }
+
     public abstract String examine();
-    public abstract  String use();
+
+    public abstract String use();
 
 
 }
