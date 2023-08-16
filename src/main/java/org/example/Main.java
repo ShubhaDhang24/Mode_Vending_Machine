@@ -8,5 +8,17 @@ public class Main {
         System.out.println(milk_choco.examine());
         System.out.println(milk_choco.use());
 
+        System.out.println("--------------------------------------------");
+        Polly polly=new Polly(2,2,"POLLY","20% KEX & 80% CHOCOLATE. ",false);
+        System.out.println(polly.examine());
+        System.out.println(polly.use());
+
+        System.out.println("---------------------------------------------");
+        Marbou marbou=new Marbou(3,30,"Marabou_choco",true);
+        System.out.println(marbou.examine());
+
+        Marbou marbouWithoutNuts=new Marbou(4,25,"Marbou",false);
+        System.out.println(marbouWithoutNuts.examine());
+
     }
 }
