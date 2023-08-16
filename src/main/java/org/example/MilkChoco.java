@@ -19,11 +19,11 @@ package org.example;
 
      public String examine()
      {
-         return ("ID :"+getId()+"  Price is :"+getPrice()+" ProductName :"+getProductName()+"Content  :"+getContent());
+         return ("ID :"+getId()+"  Price is : sek "+getPrice()+"   ProductName : "+getProductName()+"  Content  :"+getContent());
      }
      public String use()
      {
-         return getContent();
+         return "product Contains "+ getContent()+   ".  Thank you..! --Have a good day--";
      }
 
  }
