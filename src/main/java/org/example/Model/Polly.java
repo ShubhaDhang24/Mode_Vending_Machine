@@ -1,4 +1,4 @@
-package org.example;
+package org.example.Model;
 
 public class Polly extends Product {
     private String contains;
@@ -19,7 +19,8 @@ public class Polly extends Product {
     public void setContains(String contains) {
         this.contains = contains;
     }
-    public Polly(int id, double price, String productName, String content,boolean isVegan) {
+
+    public Polly(int id, double price, String productName, String content, boolean isVegan) {
         setId(id);
         setPrice(price);
         setProductName(productName);
@@ -28,9 +29,8 @@ public class Polly extends Product {
     }
 
 
-
     public String examine() {
-        return ("ID :" + getId() + "  Price is : sek " + getPrice() + "   ProductName : " + getProductName() + "  Content  :" + getContains()+ "This is "+((isVegan)?"  vegan ":"  not vegan"));
+        return ("ID :" + getId() + "  Price is : sek " + getPrice() + "   ProductName : " + getProductName() + "  Content  :" + getContains() + "This is " + ((isVegan) ? "  vegan " : "  not vegan"));
     }
 
     public String use() {

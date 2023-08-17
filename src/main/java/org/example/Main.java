@@ -1,30 +1,22 @@
 package org.example;
 
-import org.example.Model.Marbou;
+import org.example.Data.VendingMachine;
+import org.example.Model.Milk_Choco;
+import org.example.Model.Money;
+import org.example.Model.Polly;
+import org.example.Model.Product;
 
 public class Main {
     public static void main(String[] args) {
 
-       /* Milk_choco milk_choco = new Milk_choco(1, 10, "Milk_Chocolate", "30% choco & 70% milk");
-        System.out.println(" ");
-        System.out.println(milk_choco.examine());
-        System.out.println(milk_choco.use());
 
-        System.out.println("--------------------------------------------");
-        Polly polly=new Polly(2,2,"POLLY","20% KEX & 80% CHOCOLATE. ",false);
-        System.out.println(polly.examine());
-        System.out.println(polly.use());
-
-        System.out.println("---------------------------------------------");
-        Marbou marbou=new Marbou(3,30,"Marabou_choco",true);
-        System.out.println(marbou.examine());
-
-        Marbou marbouWithoutNuts=new Marbou(4,25,"Marbou",false);
-        System.out.println(marbouWithoutNuts.examine());*/
 
         Product[] products={
-                new Milk_choco(1,10,"MILK_CHOCOLATE","Contains 60% milk and 40% chocolate"),
-                new Milk_choco(2,50,"Milk_Choco_with_Nuts","60% MILK AND 40% NUTS"),
+                new Milk_Choco(1,10,"MILK_CHOCOLATE","Contains 60% milk and 40% chocolate"),
+                new Milk_Choco(2,50,"Milk_Choco_with_Nuts","60% MILK AND 40% NUTS"),
+                new Polly(3,50,"Polly Drink","Zero sugar and zero soda",true),
+                new Polly(4,100,"Polly soda","50% SODA AND 50% WATER",true),
+                new Polly(5,20,"Polly candy","80% SUGAR AND 20% GELATIN",false),
         };
         VendingMachine vendingMachine=new VendingMachine(products);
         for (String s: vendingMachine.getProducts()
@@ -33,9 +25,12 @@ public class Main {
         }
 
         vendingMachine.addCurrency(Money.HUNDRED);
-        Product Milk_choco= vendingMachine.request(1);
-        System.out.println(Milk_choco.use());
+        Product Milk_Choco= vendingMachine.request(1);
+       System.out.println(Milk_Choco.use());
         System.out.println(vendingMachine.getBalance());
+        Product Polly=vendingMachine.request(4);
+        //System.out.println(Polly.examine());
+        System.out.println(Polly.use());
 
 
 

@@ -1,7 +1,5 @@
 package org.example.Model;
 
-import org.example.Product;
-
 public class Marbou extends Product {
     private String nuts;
     boolean hasNuts;

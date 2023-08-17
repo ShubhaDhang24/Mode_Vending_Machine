@@ -1,7 +1,7 @@
-package org.example.Model;
+package org.example.Data;
 
-import org.example.Money;
-import org.example.Product;
+import org.example.Model.Money;
+import org.example.Model.Product;
 
 public interface IVendingMachine {
 
